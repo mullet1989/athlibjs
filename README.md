@@ -11,8 +11,7 @@ $ npm install --save athlib
 
 ```js
 var athlib = require('athlib');
-
-athlib('Rainbow');
+console.log(athlib.utils.normalizeGender('Male')) // == 'm'
 ```
 ## License
 

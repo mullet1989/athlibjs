@@ -22,4 +22,18 @@ describe('athlib', function() {
             false,
             false));
     });
+    it('should return the json data', function () {
+        var ag = new athlib.agegrader.AgeGrader();
+        var data = ag.getData();
+        if (data !== null) {
+            assert(true);
+        }
+    });
+    it('should give all the event codes from the JSON', function() {
+        var ag = new athlib.agegrader.AgeGrader();
+        var codes = ag.getAllEventCodes();
+        if (codes !== null) {
+            assert(true);
+        }
+    });
 });

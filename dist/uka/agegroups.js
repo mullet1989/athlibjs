@@ -4,7 +4,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 // calcAgreGroup
 exports.calcAgreGroup = function (birthDate, matchDate, category, vets, underAge) {
-    if ((typeof birthDate === 'undefined' ? 'undefined' : _typeof(birthDate)) !== Date || (typeof matchDate === 'undefined' ? 'undefined' : _typeof(matchDate)) !== Date) {
+    if (!(birthDate instanceof Date || matchDate instanceof Date)) {
         throw new Error("you must pass a valid date");
     }
     // this is the default value
@@ -17,10 +17,10 @@ exports.calcAgreGroup = function (birthDate, matchDate, category, vets, underAge
     }
     switch (category) {
         case 'TF':
-            return 'rule107';
+            return exports.rule107Tf(birthDate, matchDate, true, true);
         case 'ROAD':
         case 'XC':
-            return 'rule507';
+            return exports.rule507Xc(birthDate, matchDate, true, true);
         case 'ESAA':
             throw new Error('this has not been implemented');
         default:
@@ -28,25 +28,16 @@ exports.calcAgreGroup = function (birthDate, matchDate, category, vets, underAge
     }
 };
 
-// rule107
-exports.rule107Tf = function (birthDate, matchDate, category, vets, underAge) {
-    var augCO = new Date();
-    var decCO = new Date();
-    try {
-        augCO = new Date(matchDate);
-        decCO = new Date(matchDate);
-        if ((typeof birthDate === 'undefined' ? 'undefined' : _typeof(birthDate)) !== Date) {
-            birthDate = new Date(birthDate);
-        }
-    } catch (error) {
-        // just throw it
-        throw error;
+// rule107 Track and Field
+exports.rule107Tf = function (birthDate, matchDate, vets, underAge) {
+    if (!(birthDate instanceof Date && matchDate instanceof Date)) {
+        throw new TypeError('birthDate and matchDate must be DATE');
     }
-    var augustCutOff = new Date(augCO.getFullYear, 8, 11);
-    var decemberCutOff = new Date(decCO.getFullYear, 12, 31);
-    var ageOn31Aug = 27;
-    var ageOn31Dec = 27;
-    var ageOn31MatchDay = 27;
+    var augustCutOff = new Date(matchDate.getFullYear(), 7, 11);
+    var decemberCutOff = new Date(matchDate.getFullYear(), 11, 31);
+    var ageOn31Aug = _calculateAge(birthDate, augustCutOff);
+    var ageOn31Dec = _calculateAge(birthDate, decemberCutOff);
+    var ageOnMatchDate = _calculateAge(birthDate, matchDate);
     if (underAge && ageOn31Aug < 9) {
         return 'U9';
     }
@@ -59,16 +50,59 @@ exports.rule107Tf = function (birthDate, matchDate, category, vets, underAge) {
             return 'U15';
         case ageOn31Aug === 15 || ageOn31Aug === 16:
             return 'U17';
-        case ageOn31Aug < 20:
+        case ageOn31Dec < 20:
             return 'U20';
         default:
-            if (vets) {
+            if (ageOnMatchDate < 35) {
+                return 'SEN';
+            } else if (vets) {
                 return 'V${(ageOn31MatchDay/5)*5}';
+            } else {
+                return 'SEN';
             }
-            return 'SEN';
     }
 };
 
+// rule507 Cross Country
+exports.rule507Xc = function (birthDate, matchDate, vets, underAge) {
+    var augCO = new Date();
+    try {
+        augCO = new Date(matchDate);
+        if ((typeof birthDate === 'undefined' ? 'undefined' : _typeof(birthDate)) !== Date) {
+            birthDate = new Date(birthDate);
+        }
+    } catch (error) {
+        // just throw it
+        throw error;
+    }
+    var ageOn31Aug = _calculateAge(birthDate, augCO);
+    var ageOnMatchDate = _calculateAge(birthDate, matchDate);
+    if (underAge && ageOn31Aug < 9) {
+        return 'U9';
+    }
+    switch (true) {
+        case ageOnMatchDate < 11:
+            return 'U11';
+        case ageOn31Aug === 11 || ageOn31Aug === 12:
+            return 'U13';
+        case ageOn31Aug === 13 || ageOn31Aug === 14:
+            return 'U15';
+        case ageOn31Aug === 15 || ageOn31Aug === 16:
+            return 'U17';
+        case ageOn31Aug < 20:
+            return 'U20';
+        default:
+            if (ageOnMatchDate < 35) {
+                return 'SEN';
+            } else if (vets) {
+                return 'V${(ageOn31MatchDay/5)*5}';
+            } else {
+                return 'SEN';
+            }
+    }
+};
+
+// prior date function
 exports.priorDate = function (matchDate, cutoffDate) {
     try {
         var md = new Date(matchDate);
@@ -82,3 +116,15 @@ exports.priorDate = function (matchDate, cutoffDate) {
         throw error;
     }
 };
+
+// private function returns the number of years between two dates
+function _calculateAge(birthDate, matchDate) {
+    try {
+        var ageDifMs = matchDate - birthDate.getTime();
+        var ageDate = new Date(ageDifMs); // miliseconds from epoch
+        return ageDate.getUTCFullYear() - 1970;
+    } catch (error) {
+        // throw the error again
+        throw error;
+    }
+}

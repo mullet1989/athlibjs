@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/iaaf_score.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">lib/</a> iaaf_score.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.11% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/45</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.56% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>1/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.57% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.11% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/45</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+This file contains definitions and utility functions for determining IAAF event scores.
+*/
+&nbsp;
+/*
+Regular expressions to match jumps and throws events.
+Everything else is a track event.
+*/
+var _iaaf_jump_codes = new RegExp("^(LJ|PV|TJ|HJ)$", "i");
+var _iaaf_throw_codes = new RegExp("^(WT|JT|DT|HT|SP)$", "i");
+&nbsp;
+/*
+Array of parameters used to determine IAAF scores.
+&nbsp;
+For track events: A * (Z - &lt;seconds&gt;)^X
+For jumps events: A * (&lt;centimetres&gt; - Z)^X
+For throws events: A * (&lt;metres&gt; - Z)^X
+&nbsp;
+All scores are rounded down.
+*/
+var _iaaf_scoring_table = [
+    {gender: "M", event_code: "100", A: 25.4347, Z: 18, X: 1.81},
+    {gender: "M", event_code: "200", A: 5.8425, Z: 38, X: 1.81},
+    {gender: "M", event_code: "400", A: 1.53775, Z: 82, X: 1.81},
+    {gender: "M", event_code: "800", A: 0.13279, Z: 235, X: 1.85},
+    {gender: "M", event_code: "1500", A: 0.03768, Z: 480, X: 1.85},
+    {gender: "M", event_code: "3000", A: 0.0105, Z: 1005, X: 1.85},
+    {gender: "M", event_code: "5000", A: 0.00419, Z: 1680, X: 1.85},
+    {gender: "M", event_code: "10000", A: 0.000415, Z: 4245, X: 1.9},
+    {gender: "M", event_code: "110H", A: 5.74352, Z: 28.5, X: 1.92},
+    {gender: "M", event_code: "200H", A: 3.495, Z: 45.5, X: 1.81},
+    {gender: "M", event_code: "400H", A: 1.1466, Z: 92, X: 1.81},
+    {gender: "M", event_code: "3000SC", A: 0.00511, Z: 1155, X: 1.9},
+    {gender: "M", event_code: "LJ", A: 0.14354, Z: 220, X: 1.4},
+    {gender: "M", event_code: "TJ", A: 0.06533, Z: 640, X: 1.4},
+    {gender: "M", event_code: "HJ", A: 0.8465, Z: 75, X: 1.42},
+    {gender: "M", event_code: "PV", A: 0.2797, Z: 100, X: 1.35},
+    {gender: "M", event_code: "SP", A: 51.39, Z: 1.5, X: 1.05},
+    {gender: "M", event_code: "HT", A: 13.0449, Z: 7, X: 1.05},
+    {gender: "M", event_code: "DT", A: 12.91, Z: 4, X: 1.1},
+    {gender: "M", event_code: "JT", A: 10.14, Z: 7, X: 1.08},
+    {gender: "M", event_code: "60", A: 58.015, Z: 11.5, X: 1.81},
+    {gender: "M", event_code: "60H", A: 20.5173, Z: 15.5, X: 1.92},
+    {gender: "M", event_code: "WT", A: 47.8338, Z: 1.5, X: 1.05},
+    {gender: "F", event_code: "100", A: 17.857, Z: 21, X: 1.81},
+    {gender: "F", event_code: "200", A: 4.99087, Z: 42.5, X: 1.81},
+    {gender: "F", event_code: "400", A: 1.34285, Z: 91.7, X: 1.81},
+    {gender: "F", event_code: "800", A: 0.11193, Z: 254, X: 1.88},
+    {gender: "F", event_code: "1500", A: 0.02883, Z: 535, X: 1.88},
+    {gender: "F", event_code: "3000", A: 0.00683, Z: 1150, X: 1.88},
+    {gender: "F", event_code: "5000", A: 0.00272, Z: 1920, X: 1.88},
+    {gender: "F", event_code: "10000", A: 0.000369, Z: 4920, X: 1.88},
+    {gender: "F", event_code: "100H", A: 9.23076, Z: 26.7, X: 1.835},
+    {gender: "F", event_code: "200H", A: 2.975, Z: 52, X: 1.81},
+    {gender: "F", event_code: "400H", A: 0.99674, Z: 103, X: 1.81},
+    {gender: "F", event_code: "3000SC", A: 0.00408, Z: 1320, X: 1.9},
+    {gender: "F", event_code: "LJ", A: 0.188807, Z: 210, X: 1.41},
+    {gender: "F", event_code: "TJ", A: 0.08559, Z: 600, X: 1.41},
+    {gender: "F", event_code: "HJ", A: 1.84523, Z: 75, X: 1.348},
+    {gender: "F", event_code: "PV", A: 0.44125, Z: 100, X: 1.35},
+    {gender: "F", event_code: "SP", A: 56.0211, Z: 1.5, X: 1.05},
+    {gender: "F", event_code: "HT", A: 17.5458, Z: 6, X: 1.05},
+    {gender: "F", event_code: "DT", A: 12.331, Z: 3, X: 1.1},
+    {gender: "F", event_code: "JT", A: 15.9803, Z: 3.8, X: 1.04},
+    {gender: "F", event_code: "60", A: 46.0849, Z: 13, X: 1.81},
+    {gender: "F", event_code: "60H", A: 20.0479, Z: 17, X: 1.835},
+    {gender: "F", event_code: "WT", A: 52.1403, Z: 1.5, X: 1.05}
+];
+&nbsp;
+// Utility function to get the &lt;gender&gt;-&lt;event&gt; scoring key
+<span class="fstat-no" title="function not covered" >function iaaf_scoring_key(gender, event_code) {</span>
+<span class="cstat-no" title="statement not covered" >    v</span>ar key = (gender + "-" + event_code);
+<span class="cstat-no" title="statement not covered" >    r</span>eturn key.toUpperCase();
+}
+&nbsp;
+/*
+Function to handle lazy evaluation of _iaaf_scoring_objects, which maps from
+scoring key to parameters
+*/
+function _iaaf_scoring_objects_create() {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof _iaaf_scoring_objects == "undefined") {
+        var n = _iaaf_scoring_table.length;
+        _iaaf_scoring_objects = {};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; n; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            v</span>ar o = _iaaf_scoring_table[i];
+<span class="cstat-no" title="statement not covered" >            _</span>iaaf_scoring_objects[iaaf_scoring_key(o.gender, o.event_code)] = o;
+        }
+    }
+}
+&nbsp;
+/*
+Function to determine IAAF score, based on gender, event and performance.
+Note that value is &lt;seconds&gt; for track events, &lt;metres&gt; for throws events and
+&lt;centimetres&gt; for jumps events.
+*/
+var iaaf_score = <span class="fstat-no" title="function not covered" >function(gender, event_code, value) {</span>
+    // Create _iaaf_scoring_objects (lazily evaluated)
+<span class="cstat-no" title="statement not covered" >    _</span>iaaf_scoring_objects_create();
+&nbsp;
+    // Inner function (closure) to get the score
+<span class="fstat-no" title="function not covered" >    function fnew(gender, event_code, value) {</span>
+<span class="cstat-no" title="statement not covered" >        v</span>ar coeffs =
+            _iaaf_scoring_objects[iaaf_scoring_key(gender, event_code)];
+&nbsp;
+        // Drop out if no coefficients defined (e.g. bad event/gender)
+<span class="cstat-no" title="statement not covered" >        if (!coeffs) {</span>
+<span class="cstat-no" title="statement not covered" >            r</span>eturn null;
+        }
+&nbsp;
+        // Handle based on whether jumps, throws or track event
+<span class="cstat-no" title="statement not covered" >        if (event_code.match(_iaaf_jump_codes)) {</span>
+<span class="cstat-no" title="statement not covered" >            r</span>eturn Math.floor(coeffs.A * Math.pow(value - coeffs.Z, coeffs.X));
+        } else <span class="cstat-no" title="statement not covered" >if (event_code.match(_iaaf_throw_codes)) {</span>
+<span class="cstat-no" title="statement not covered" >            r</span>eturn Math.floor(coeffs.A * Math.pow(value - coeffs.Z, coeffs.X));
+        } else {
+<span class="cstat-no" title="statement not covered" >            r</span>eturn Math.floor(coeffs.A * Math.pow(coeffs.Z - value, coeffs.X));
+        }
+    }
+&nbsp;
+    // Return the score-calculation function
+<span class="cstat-no" title="statement not covered" >    i</span>aaf_score = fnew;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    r</span>eturn iaaf_score(gender, event_code, value);
+}
+&nbsp;
+// Utility function to get the unit name based on event type
+<span class="fstat-no" title="function not covered" >function iaaf_unit_name(event_code) {</span>
+<span class="cstat-no" title="statement not covered" >    if (event_code.match(_iaaf_jump_codes)) {</span>
+<span class="cstat-no" title="statement not covered" >        r</span>eturn "centimetres";
+    } else <span class="cstat-no" title="statement not covered" >if (event_code.match(_iaaf_throw_codes)) {</span>
+<span class="cstat-no" title="statement not covered" >        r</span>eturn "metres";
+    } else {
+<span class="cstat-no" title="statement not covered" >        r</span>eturn "seconds";
+    }
+}
+&nbsp;
+/*
+Function to determine performance required to achieve IAAF score, given gender
+and event
+Note that performance is &lt;seconds&gt; for track events, &lt;metres&gt; for throws events
+and &lt;centimetres&gt; for jumps events.
+*/
+exports.iaaf_performance = function iaaf_performance(gender, event_code, score) {
+    // Create _iaaf_scoring_objects (lazily evaluated)
+    _iaaf_scoring_objects_create();
+&nbsp;
+    // Inner function (closure) to get the performance
+<span class="fstat-no" title="function not covered" >    function fnew(gender, event_code, score) {</span>
+<span class="cstat-no" title="statement not covered" >        v</span>ar coeffs = _iaaf_scoring_objects[iaaf_scoring_key(gender,event_code)];
+&nbsp;
+        // Drop out if no coefficients defined (e.g. bad event/gender)
+<span class="cstat-no" title="statement not covered" >        if (!coeffs) {</span>
+<span class="cstat-no" title="statement not covered" >            r</span>eturn null;
+        }
+&nbsp;
+        // Handle based on whether jumps, throws or track event
+<span class="cstat-no" title="statement not covered" >        if (event_code.match(_iaaf_jump_codes)) {</span>
+<span class="cstat-no" title="statement not covered" >            r</span>eturn Math.ceil((Math.pow(score / coeffs.A, 1.0 / coeffs.X)) +
+                coeffs.Z);
+        } else <span class="cstat-no" title="statement not covered" >if (event_code.match(_iaaf_throw_codes)) {</span>
+<span class="cstat-no" title="statement not covered" >            r</span>eturn Math.ceil(100.0 *
+                ((Math.pow(score / coeffs.A, 1.0 / coeffs.X)) + coeffs.Z)) /
+                100.0;
+        } else {
+<span class="cstat-no" title="statement not covered" >            r</span>eturn Math.floor(100.0 *
+                (coeffs.Z - (Math.pow(score / coeffs.A, 1.0 / coeffs.X)))) /
+                100.0;
+        }
+    }
+&nbsp;
+    // Return the performance-calculation function
+<span class="cstat-no" title="statement not covered" >    i</span>aaf_performance = fnew;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    r</span>eturn iaaf_performance(gender, event_code, score);
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Dec 10 2016 21:13:30 GMT+0000 (GMT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

@@ -22,7 +22,7 @@ describe('athlib', function() {
             false,
             false));
     });
-    it('should return the json data', function () {
+    it('should return the json data', function() {
         var ag = new athlib.agegrader.AgeGrader();
         var data = ag.getData();
         if (data !== null) {
@@ -35,5 +35,9 @@ describe('athlib', function() {
         if (codes !== null) {
             assert(true);
         }
+    });
+    it('should do something with the iaaf scoring', function() {
+        //var iaafScore = athlib.iaaf_score.iaaf_performance('m', '100m', 9.85);
+        assert(true);
     });
 });

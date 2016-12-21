@@ -1,7 +1,14 @@
 language: node_js
 node_js:
-  - v7
-  - v6
-  - v5
-  - v4
-script: gulp
+    - v7
+    - v6
+    - v5
+    - v4
+before_script:
+    - npm install -g gulp
+script:
+    - gulp
+    - istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec
+    - codecov
+after_success:
+    bash <(curl -s https://codecov.io/bash)

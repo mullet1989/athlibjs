@@ -37,7 +37,9 @@ describe('athlib', function() {
         }
     });
     it('should do something with the iaaf scoring', function() {
-        //var iaafScore = athlib.iaaf_score.iaaf_performance('m', '100m', 9.85);
-        assert(true);
+        var iaafScore = athlib.iaaf_score.iaaf_performance('m', '100', 9.85);
+        if (iaafScore != (null || undefined || "")) {
+            assert(true);
+        }
     });
 });

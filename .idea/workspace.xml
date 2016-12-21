@@ -4,33 +4,10 @@
     <option name="FILTER_RESOLVED_ITEMS" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="832cc6cb-511a-4521-91d9-7ddef75aba93" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.eslintrc.json" afterPath="$PROJECT_DIR$/.eslintrc.json" />
+    <list default="true" id="832cc6cb-511a-4521-91d9-7ddef75aba93" name="Default" comment="adding strict mode, removed node v4/5 testing">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/coverage-final.json" afterPath="$PROJECT_DIR$/coverage/coverage-final.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/lcov-report/lib/codes.js.html" afterPath="$PROJECT_DIR$/coverage/lcov-report/lib/codes.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/lcov-report/lib/iaaf_score.js.html" afterPath="$PROJECT_DIR$/coverage/lcov-report/lib/iaaf_score.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/lcov-report/lib/index.html" afterPath="$PROJECT_DIR$/coverage/lcov-report/lib/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/lcov-report/lib/index.js.html" afterPath="$PROJECT_DIR$/coverage/lcov-report/lib/index.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/lcov-report/lib/uka/agegroups.js.html" afterPath="$PROJECT_DIR$/coverage/lcov-report/lib/uka/agegroups.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/lcov-report/lib/uka/index.html" afterPath="$PROJECT_DIR$/coverage/lcov-report/lib/uka/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/lcov-report/lib/utils.js.html" afterPath="$PROJECT_DIR$/coverage/lcov-report/lib/utils.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/lcov-report/lib/wma/agegrader.js.html" afterPath="$PROJECT_DIR$/coverage/lcov-report/lib/wma/agegrader.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/lcov-report/lib/wma/index.html" afterPath="$PROJECT_DIR$/coverage/lcov-report/lib/wma/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/lcov.info" afterPath="$PROJECT_DIR$/coverage/lcov.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/codes.js" afterPath="$PROJECT_DIR$/dist/codes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/iaaf_score.js" afterPath="$PROJECT_DIR$/dist/iaaf_score.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/wma/agegrader.js" afterPath="$PROJECT_DIR$/dist/wma/agegrader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/codes.js" afterPath="$PROJECT_DIR$/lib/codes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/iaaf_score.js" afterPath="$PROJECT_DIR$/lib/iaaf_score.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/wma/agegrader.js" afterPath="$PROJECT_DIR$/lib/wma/agegrader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/index.js" afterPath="$PROJECT_DIR$/test/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/uka/agegroups.js" afterPath="$PROJECT_DIR$/lib/uka/agegroups.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,8 +31,28 @@
       <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="105">
+              <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="agegrader.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/wma/agegrader.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="agegroups.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/uka/agegroups.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -79,7 +76,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/wma/agegrader.js" />
         <option value="$PROJECT_DIR$/lib/codes.js" />
         <option value="$PROJECT_DIR$/.eslintrc.json" />
         <option value="$PROJECT_DIR$/lib/iaaf_score.js" />
@@ -87,6 +83,8 @@
         <option value="$PROJECT_DIR$/lib/utils.js" />
         <option value="$PROJECT_DIR$/.eslintignore" />
         <option value="$PROJECT_DIR$/dist/wma/agegrader.js" />
+        <option value="$PROJECT_DIR$/lib/uka/agegroups.js" />
+        <option value="$PROJECT_DIR$/lib/wma/agegrader.js" />
         <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
@@ -217,7 +215,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -231,11 +229,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="codecov" />
+              <option name="myItemId" value="wma" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="athlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="athlib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uka" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -255,6 +271,7 @@
     <property name="js.eslint.eslintPackage" value="/usr/local/lib/node_modules/eslint" />
     <property name="javascript.nodejs.core.library.configured.version" value="6.9.1" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
+    <property name="GO_FMT" value="false" />
   </component>
   <component name="RunManager" selected="Mocha.mocha">
     <configuration default="false" name="default" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
@@ -413,8 +430,16 @@
       <option name="presentableId" value="Default" />
       <updated>1482099065596</updated>
       <workItem from="1482099068102" duration="4093000" />
-      <workItem from="1482335533163" duration="1682000" />
+      <workItem from="1482335533163" duration="2801000" />
     </task>
+    <task id="LOCAL-00001" summary="adding strict mode, removed node v4/5 testing">
+      <created>1482339433610</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1482339433610</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -450,7 +475,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5775000" />
+    <option name="totallyTimeSpent" value="6894000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -509,6 +534,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding strict mode, removed node v4/5 testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding strict mode, removed node v4/5 testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -599,14 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/wma/agegrader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -647,10 +668,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/wma/agegrader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/uka/agegroups.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        <state relative-caret-position="105">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
           <folding />
         </state>
       </provider>

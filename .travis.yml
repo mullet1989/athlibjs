@@ -2,10 +2,9 @@ language: node_js
 node_js:
     - v7
     - v6
-    - v5
-    - v4
 before_script:
     - npm install -g gulp
+    - npm install -g istanbul
 script:
     - gulp
     - istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec

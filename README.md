@@ -52,3 +52,4 @@ Apache-2.0 © [benjamintoomer](https://github.com/mullet1989)
 [travis-url]: https://travis-ci.org/mullet1989/athlibjs
 [daviddm-image]: https://david-dm.org/mullet1989/athlibjs.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/mullet1989/athlibjs
+[![codecov](https://codecov.io/gh/mullet1989/athlibjs/branch/master/graph/badge.svg)](https://codecov.io/gh/mullet1989/athlibjs)
